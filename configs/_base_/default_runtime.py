@@ -14,10 +14,10 @@ env_cfg = dict(
     dist_cfg=dict(backend='nccl'),
 )
 
-#vis_backends = [dict(type='LocalVisBackend')]
+# vis_backends = [dict(type='LocalVisBackend')]
 vis_backends = [dict(type='TensorboardVisBackend')]
 visualizer = dict(
-    type='DetLocalVisualizer', vis_backends=vis_backends, name='visualizer',save_dir='work_dirs/yolov3_voc_experiment')
+    type='DetLocalVisualizer', vis_backends=vis_backends, name='visualizer',save_dir='vis-result/val-result')
 log_processor = dict(type='LogProcessor', window_size=50, by_epoch=True)
 
 log_level = 'INFO'
